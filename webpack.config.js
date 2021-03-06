@@ -13,7 +13,6 @@ module.exports = {
     compress: true,
     open: true,
     port: 9000,
-    contentBase: path.join(process.cwd(), 'dist'),
     host: 'localhost',
     historyApiFallback: true,
     noInfo: false,
