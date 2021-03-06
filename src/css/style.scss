@@ -1,0 +1,474 @@
+@import '../css/common-style/style.css';
+@import '../fonts/SegoeWp/fonts.css';
+@import '../fonts/UniversCE/fonts.css';
+@import '../fonts/MrsEavesItalic/fonts.css';
+
+.header {
+  background: gray;
+
+  &__top-header {
+    padding-top: 36px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__logo {
+    font-family: 'MrsEavesOT';
+    font-size: 118.5px;
+    color: rgba(255, 255, 255, 0.68);
+    text-align: justify;
+  }
+
+  &__center {
+    flex: 0 0 5%;
+  }
+
+  &__nav {
+    padding-top: 16px;
+  }
+
+  &__link {
+    color: rgba(255, 255, 255, 0.68);;
+    font-size: 22.6px;
+    font-weight: 300;
+    padding: 0 20px;
+  }
+
+  &__bottom {
+
+    display: flex;
+    justify-content: center;
+  }
+
+  &__btn-left {
+    top: 125px;
+    right: 185px;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: none;
+    border-radius: 50%;
+    border: 4px solid rgba(255,255,255,0.2);
+  }
+
+  &__triangle-l {
+
+    position: absolute;
+    content: " ";
+    width: 15px;
+    height: 19px;
+    bottom: 12px;
+    left: 12px;
+    clip-path: polygon(100% 100%, 100% 0, 0 50%);
+    background-color: rgba(255,255,255,0.2);
+  }
+
+  &__card {
+    display: flex;
+  }
+
+  &__place-img {
+    flex: 0 0 50%;
+    min-width: 330px;
+    position: relative;
+    img {
+      position: absolute;
+      right: 60px;
+      top: 40px;
+    }
+  }
+
+  &__describe {
+    margin-left: 10px;
+    flex: 0 0 50%;
+    h2 {
+      padding-top: 87px;
+      min-width: 360px;
+      line-height: 0.9;
+      font-size: 64.6px;
+      font-weight: 600;
+      text-align: left;
+      color: #ffffff;
+      span {
+        font-size: 44.6px;
+        font-weight: 300;
+      }
+    }
+    button {
+      margin-top: 35px;
+      margin-bottom: 60px;
+      width: 138px;
+      height: 38px;
+      border: solid 4px rgba(0, 0, 0, 0.37);
+      background: #12b367;
+      font-size: 22.6px;
+      color: #ffffff;
+    }
+  }
+
+  &__btn-right {
+    position: relative;
+    background: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 4px solid rgba(255,255,255,0.2);
+    top: 125px;
+    left: 185px;
+
+  }
+
+  &__triangle-r {
+    position: absolute;
+    content: " ";
+    width: 15px;
+    height: 19px;
+    bottom: 12px;
+    right: 12px;
+    clip-path: polygon(100% 50%, 0 0, 0 100%);
+    background-color: rgba(255,255,255,0.2);
+  }
+}
+
+
+.tabs {
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__cards {
+    width: 1022px;
+    display: flex;
+    margin-top: 60px;
+
+  }
+
+  &__card {
+    flex: 0 0 25%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    position: relative;
+    top: 1px;
+  }
+
+  // &__blocks {
+
+  // }
+
+  &__block {
+
+    box-shadow: 0 1px 4px #888;
+    max-width: 1022px;
+    margin-top: 4px;
+    display: flex;
+    flex-direction: column;
+    img{
+      align-self: center;
+      width: 656px;
+      padding-top: 62px;
+    }
+    h3 {
+      padding: 50px 54px 0px 54px;
+      font-size: 38.6px;
+      font-weight: 300;
+    }
+    span {
+      line-height: 1.6;
+      padding: 0px 54px 60px 54px;
+      font-family: 'Univers Light';
+      font-size: 14px;
+      font-weight: 300;
+    }
+    span:first-of-type{
+      padding: 32px 54px;
+    }
+
+    // &_responsive {
+
+    // }
+
+    &_commercy {
+      display: none;
+    }
+
+    &_daily {
+      display: none;
+    }
+
+    &_search {
+      display: none;
+    }
+  }
+}
+
+
+.card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+
+  span {
+    padding-bottom: 48px;
+    text-align: center;
+    max-width: 158px;
+    font-size: 26.6px;
+    font-weight: 300;
+  }
+
+  &_responsive {
+    box-shadow: 0px 5px 0px  #fff, 0 0 4px #888;
+  }
+
+  // &_commerce {
+
+  // }
+
+  // &_daily {
+
+  // }
+
+  // &_search {
+
+  // }
+
+  &__polygon {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25px 0;
+
+    &_blue {
+      background: blue;
+    }
+
+    &_orange {
+      background: #fdcf0a;
+    }
+
+    &_green {
+      background: #12b367;
+    }
+
+    &_red {
+      background: #e67624;
+    }
+  }
+}
+.polygon {
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  width: 137px;
+  height: 157px;
+}
+
+
+.why {
+  border-bottom: 1px solid rgba( 0, 0, 0 ,0.11);
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 54px;
+  }
+
+  &__describe {
+    margin-left: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__title {
+    font-size: 32.6px;
+    font-weight: 300;
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    font-size: 16px;
+    font-weight: 200;
+    position: relative;
+    padding: 11px 0px 11px 35px;
+
+    &::before{
+      content: '';
+      background-image: url('../awesome/check-circle-solid.svg');
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      top: 10px;
+      left: 0;
+    }
+  }
+}
+
+
+.forms {
+  margin-top: 23px;
+}
+.forms__container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 35px;
+}
+.form {
+
+  border-radius: 5px;
+  width: 470px;
+  height: 109px;
+  font-size: 16px;
+  font-weight: 300;
+
+  &:nth-child(2){
+    margin-left: 68px;
+  }
+		&_red {
+      background: #e67624;
+		}
+
+		&_blue {
+      background: #01d4f3;
+		}
+
+		&__title {
+      margin: 12px 0 20px 27px;
+      color:white;
+      font-size: 28px;
+      font-weight: 300;
+      display: block;
+		}
+
+		&__input1 {
+      padding-left: 10px;
+      width: 150px;
+      height: 26px;
+      &:nth-child(2) {
+        margin: 0 10px 0 27px;
+      }
+		}
+
+		&__btn {
+      width: 94px;
+      height: 30px;
+      color:white;
+      margin-left: 15px;
+			&_black {
+        background: #444444;
+			}
+
+			&_gray {
+        background:#029bb1;
+			}
+		}
+
+		&__input2 {
+      padding-left: 10px;
+      width: 265px;
+      height: 26px;
+      margin: 0 10px 0 27px;
+		}
+}
+
+
+.footer {
+  background: black;
+  &__container {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__about {
+    flex: 0 0 14%;
+    margin-bottom: 54px;
+  }
+
+  &__title {
+    margin-top: 26px;
+    margin-bottom: 5px;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1.5;
+    text-align: left;
+    color: white;
+  }
+
+  &__item {
+    line-height: 1.69;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    &_bold {
+      font-weight: 600;
+    }
+
+  }
+
+  &__carousel {
+    flex: 0 0 21%;
+  }
+
+  &__nav {
+    display: flex;
+
+  }
+
+  &__btn-l {
+    margin-top: 38px;
+    margin-left: 63px;
+    width: 16px;
+    height: 16px;
+    color: white;
+    background: url("../awesome/chevron-circle-left-solid.svg") 0 0 no-repeat;
+    opacity: 0.2;
+  }
+
+  &__btn-r {
+    margin-top: 38px;
+    margin-left: 8px;
+    width: 16px;
+    height: 16px;
+    color: white;
+    background: url("../awesome/chevron-circle-right-solid.svg") 0 0 no-repeat;
+    opacity: 0.2;
+  }
+
+  &__window {
+    max-height: 130px;
+    overflow-y: hidden;
+    transition: .2s;
+  }
+
+  &__slide {
+    li:nth-child(2) {
+      color: white;
+      max-width: 141px;
+    }
+  }
+
+  &__card {
+    height: 130px;
+  }
+
+  &__label {
+    flex: 0 0 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.22);
+    span {
+      color: white;
+      opacity: 0.8;
+      font-family: Arial;
+      font-size: 13px;
+    }
+  }
+}
+
+
+
