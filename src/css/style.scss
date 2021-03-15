@@ -34,36 +34,38 @@
     padding: 0 20px;
   }
 
-  &__bottom {
-
-    display: flex;
-    justify-content: center;
-  }
-
-  &__btn-left {
-    top: 125px;
-    right: 185px;
-    position: relative;
+  .slick-slider {
+    overflow: hidden;
+    max-width: 400px;
+    .slick-track{
+      display: flex;
+    }
+    .slick-arrow {
+      position: absolute;
+      top:125px;
+      font-size: 0;
+    }
+    .slick-arrow.slick-prev{
     width: 50px;
     height: 50px;
-    background: none;
+    left: 100px;
+    background: url('../images/icons/Shape\ 3\ copy@1X.png')  12px 12px /35% no-repeat;
     border-radius: 50%;
     border: 4px solid rgba(255,255,255,0.2);
-  }
+    }
+    .slick-arrow.slick-next{
+      right: 100px;
+      width: 50px;
+      height: 50px;
+      background: url('../images/icons/Shape\ 3\ copy\ 2@1X.png')  16px 12px /35% no-repeat;
+      border-radius: 50%;
+      border: 4px solid rgba(255,255,255,0.2);
+    }
 
-  &__triangle-l {
-
-    position: absolute;
-    content: " ";
-    width: 15px;
-    height: 19px;
-    bottom: 12px;
-    left: 12px;
-    clip-path: polygon(100% 100%, 100% 0, 0 50%);
-    background-color: rgba(255,255,255,0.2);
   }
 
   &__card {
+    position: relative;
     display: flex;
   }
 
@@ -77,10 +79,8 @@
       top: 40px;
     }
   }
-
   &__describe {
     margin-left: 10px;
-    flex: 0 0 50%;
     h2 {
       padding-top: 87px;
       min-width: 360px;
@@ -94,6 +94,7 @@
         font-weight: 300;
       }
     }
+
     button {
       margin-top: 35px;
       margin-bottom: 60px;
@@ -106,30 +107,7 @@
     }
   }
 
-  &__btn-right {
-    position: relative;
-    background: none;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 4px solid rgba(255,255,255,0.2);
-    top: 125px;
-    left: 185px;
-
-  }
-
-  &__triangle-r {
-    position: absolute;
-    content: " ";
-    width: 15px;
-    height: 19px;
-    bottom: 12px;
-    right: 12px;
-    clip-path: polygon(100% 50%, 0 0, 0 100%);
-    background-color: rgba(255,255,255,0.2);
-  }
 }
-
 
 .tabs {
   &__body {
@@ -265,7 +243,6 @@
   height: 157px;
 }
 
-
 .why {
   border-bottom: 1px solid rgba( 0, 0, 0 ,0.11);
 
@@ -307,15 +284,16 @@
   }
 }
 
-
 .forms {
   margin-top: 23px;
 }
+
 .forms__container {
   display: flex;
   justify-content: center;
   padding-bottom: 35px;
 }
+
 .form {
 
   border-radius: 5px;
@@ -374,7 +352,6 @@
 		}
 }
 
-
 .footer {
   background: black;
   &__container {
@@ -417,42 +394,47 @@
 
   }
 
-  &__btn-l {
-    margin-top: 38px;
-    margin-left: 63px;
-    width: 16px;
-    height: 16px;
-    color: white;
-    background: url("../awesome/chevron-circle-left-solid.svg") 0 0 no-repeat;
-    opacity: 0.2;
-  }
-
-  &__btn-r {
-    margin-top: 38px;
-    margin-left: 8px;
-    width: 16px;
-    height: 16px;
-    color: white;
-    background: url("../awesome/chevron-circle-right-solid.svg") 0 0 no-repeat;
-    opacity: 0.2;
-  }
-
-  &__window {
-    max-height: 130px;
-    overflow-y: hidden;
-    transition: .2s;
-  }
-
   &__slide {
-    li:nth-child(2) {
+    position: relative;
+    div:nth-child(2) {
       color: white;
-      max-width: 141px;
+      max-width: 290px;
     }
+    .slick-list {
+      overflow: hidden;
+    }
+    .slick-track{
+      display: flex;
+    }
+
+    .slick-arrow {
+      position: absolute;
+      bottom: 100%;
+      z-index: 2;
+      top: -30px;
+      font-size: 0;
+      }
+      .slick-arrow.slick-prev {
+        left: 190px;
+        width: 16px;
+        height: 16px;
+        color: white;
+        background: url("../awesome/chevron-circle-left-solid.svg") 0 0 /100% no-repeat;
+        opacity: 0.2;
+      }
+      .slick-arrow.slick-next {
+        left:220px;
+        width: 16px;
+        height: 16px;
+        color: white;
+        background: url("../awesome/chevron-circle-right-solid.svg") 0 0 /100% no-repeat;
+        opacity: 0.2;
+      }
   }
 
-  &__card {
-    height: 130px;
-  }
+
+
+
 
   &__label {
     flex: 0 0 20%;

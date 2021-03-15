@@ -3,6 +3,15 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { LoaderOptionsPlugin } = require('webpack');
 
+const optimization = () => {
+  const config = {
+    splitChunks: {
+      chunks: 'all'
+    }
+  };
+  return config;
+};
+
 module.exports = {
   mode: 'development',
   entry: {
@@ -80,6 +89,9 @@ module.exports = {
       filename: './style.css'
     })
   ],
+
+  optimization: optimization()
+  ,
 
   output: {
     filename: '[name].[fullhash] .js',

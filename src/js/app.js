@@ -1,5 +1,8 @@
 import '../css/style.scss';
 
 
-import './footerCarousel.js';
+import '../js/slick-slide/slick.min.js';
+import '../js/carousels/footerCarousel';
+import '../js/carousels/headerCarousel.js';
+
 
