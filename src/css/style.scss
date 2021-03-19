@@ -132,9 +132,6 @@
     top: 1px;
   }
 
-  // &__blocks {
-
-  // }
 
   &__block {
 
@@ -163,30 +160,17 @@
       padding: 32px 54px;
     }
 
-    // &_responsive {
 
-    // }
-
-    &_commercy {
-      display: none;
-    }
-
-    &_daily {
-      display: none;
-    }
-
-    &_search {
-      display: none;
-    }
   }
 }
-
+.d-none {
+  display: none;
+}
 
 .card {
   display: flex;
   align-items: center;
   flex-direction: column;
-
 
   span {
     padding-bottom: 48px;
@@ -195,23 +179,6 @@
     font-size: 26.6px;
     font-weight: 300;
   }
-
-  &_responsive {
-    box-shadow: 0px 5px 1px  #fff, 0 0 4px #888;
-    border-bottom: 5px solid #fff;
-  }
-
-  // &_commerce {
-
-  // }
-
-  // &_daily {
-
-  // }
-
-  // &_search {
-
-  // }
 
   &__polygon {
 
@@ -237,10 +204,16 @@
     }
   }
 }
+
 .polygon {
   clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
   width: 137px;
   height: 157px;
+}
+
+.active-card{
+  box-shadow: 0px 5px 1px  #fff, 0 0 4px #888;
+  border-bottom: 5px solid #fff;
 }
 
 .why {
