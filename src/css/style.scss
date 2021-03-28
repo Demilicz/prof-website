@@ -179,7 +179,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 1022px;
+    max-width: 1065px;
   }
 
   &__cards {
@@ -720,7 +720,6 @@
   }
 
 
-
   .header__center {
     flex: 0 0 60%;
     @media screen and (max-width:576px){
@@ -748,9 +747,7 @@
       font-size: 30px;
     }
   }
-  .body._lock {
-    overflow: hidden;
-  }
+
   .header__nav._active {
     left: 0px;
     .header__logo {

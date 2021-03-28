@@ -38,7 +38,10 @@ module.exports = {
 
             options: {
               name: '[path][name].[ext]',
-              outputPath: 'images/'
+              outputPath: 'images/',
+              publicPath: 'images/',
+              emitFile: true,
+              esModule: false,
             },
           },
         ],
