@@ -272,7 +272,7 @@
     }
     @media screen and (max-width:400px){
       padding-bottom: 12px;
-      font-size: 12px;
+      font-size: 11px;
     }
   }
 
@@ -322,8 +322,8 @@
     height: 88px;
     }
     @media screen and (max-width:400px){
-      width: 63px;
-      height: 76px;
+      width: 53px;
+      height: 66px;
     }
 }
 
@@ -655,6 +655,10 @@
 }
 .menu-burger {
   display: none;
+}
+
+._lock {
+  overflow: hidden;
 }
 
 
