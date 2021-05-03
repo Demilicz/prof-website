@@ -1,7 +1,7 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { LoaderOptionsPlugin } = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const optimization = () => {
   const config = {
@@ -35,13 +35,9 @@ module.exports = {
         use: [
           {
             loader: 'file-loader',
-
             options: {
               name: '[path][name].[ext]',
-              outputPath: 'images/',
-              publicPath: 'images/',
-              emitFile: true,
-              esModule: false,
+              // esModule: false,
             },
           },
         ],
@@ -56,14 +52,18 @@ module.exports = {
         },
       },
       {
+        test: /\.html$/i,
+        loader: 'html-loader',
+        options: {
+          esModule: false,
+          minimize: false,
+      }
+      },
+      {
         test: /\.scss$/i,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
-            options: {
-
-              // hmr: process.env.NODE_ENV === 'development'
-            }
           },
           'css-loader',
           'postcss-loader',
@@ -86,10 +86,16 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'index.html',
+      template: path.resolve(__dirname, 'src/index.html'),
+      minify: false
     }),
     new MiniCssExtractPlugin({
       filename: './style.css'
+    }),
+    new CopyWebpackPlugin ({
+      patterns: [
+        {from: path.resolve(__dirname, 'src/assets'), to: path.resolve(__dirname, 'dist')}
+      ]
     })
   ],
 

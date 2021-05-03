@@ -400,6 +400,7 @@
     align-items: center;
     }
 }
+
 .form {
   border-radius: 5px;
   display: flex;
@@ -419,9 +420,9 @@
 
 
   &:nth-child(2){
-    margin-left: 68px;
-    @media screen and (max-width:1064px){
-      margin-left: 10px;
+    margin-left: 120px;
+    @media screen and (max-width:1074px){
+      margin-left: 30px;
      }
      @media screen and (max-width:992px){
       margin-left: 0px;
@@ -454,16 +455,10 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin: 0 0 0 15px;
-    @media screen and (max-width:400px){
-      // flex-direction: column;
-      :nth-child(odd ){
-        margin: 5px 0;
-      }
-      :nth-child(even ){
-        margin: 5px 0;
-      }
-    }
+    margin: 0  15px;
+    @media screen and (max-width:576px){
+      margin: 0px ;
+     }
   }
 
   &__input1 {
@@ -472,18 +467,14 @@
     height: 26px;
     margin-top: 5px;
     margin-bottom: 5px;
+
     &:nth-child(1) {
       margin-right: 15px;
       @media screen and (max-width:400px){
-        min-width: 234px;
+        min-width: 258px;
+        margin-right: 0px;
         max-width: auto;
-
       }
-    }
-    &:nth-child(2) {
-      @media screen and (max-width:400px){
-        margin-right: 6px;
-       }
     }
   }
 
@@ -509,10 +500,11 @@
     height: 26px;
     margin-top: 5px;
     margin-bottom: 5px;
+    @media screen and (max-width:400px){
+        width: 258px;
+     }
   }
 }
-
-
 
 .footer {
   background: black;
